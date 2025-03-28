@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Finanssida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #002244;
+            color: white;
+            padding: 20px;
+        }
+        nav {
+            background-color: #004488;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin: 10px auto;
+            width: 80%;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #002244;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('services').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Välkommen till Min Finanssida</h1>
+        <p>Trygga ekonomiska lösningar för alla</p>
+    </header>
+
+    <nav>
+        <a onclick="showSection('home')">Hem</a>
+        <a onclick="showSection('services')">Tjänster</a>
+        <a onclick="showSection('about')">Om oss</a>
+        <a onclick="showSection('contact')">Kontakt</a>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="section">
+            <h2>Nyheter & Uppdateringar</h2>
+            <p>✔ Vi har nu ännu bättre lånevillkor för våra kunder.</p>
+            <p>✔ Vårt nya sparkonto ger högre ränta – ta del av erbjudandet nu!</p>
+            <img src="nyheter.jpg" alt="Nyheter och uppdateringar" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </section>
+
+        <section id="services" class="section" style="display: none;">
+            <h2>Våra tjänster</h2>
+            <p>Vi erbjuder lån, sparande och investeringsrådgivning för privatpersoner och företag.</p>
+            <p><a href="#">Läs mer</a></p>
+            <img src="tjanster.jpg" alt="Våra tjänster" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </section>
+
+        <section id="about" class="section" style="display: none;">
+            <h2>Om oss</h2>
+            <p>Vi är en pålitlig och kundfokuserad bank som erbjuder trygga och smarta ekonomiska lösningar.</p>
+            <p>Vårt mål är att hjälpa våra kunder att växa ekonomiskt med säkra och innovativa tjänster.</p>
+            <img src="omoss.jpg" alt="Om oss" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </section>
+
+        <section id="contact" class="section" style="display: none;">
+            <h2>Kontakt</h2>
+            <p>📧 E-post: <a href="mailto:inyexe@gmail.com">inyexe@gmail.com</a></p>
+            <p>📞 Telefon: <a href="tel:+46762021220">+46 76 202 12 20</a></p>
+            <img src="kontakt.jpg" alt="Kontaktinformation" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Min Finanssida. Alla rättigheter förbehållna.</p>
+    </footer>
+
+</body>
+</html>
